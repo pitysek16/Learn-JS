@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    .btn-bg {
+        padding: 10px 20px;
+        text-align: center;
+        background: #fff0bd;
+        border: 2px solid rgb(255, 144, 144);
+        margin: 10px;
+    }
+
+    .round {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background: red;
+        display: none;
+        top: 0;
+        left: 0;
+        position: absolute;
+        transition: left .2s linear, top .2s linear;
+    }
+    .round-visible {
+        display: block;
+    }
+
+    .todolist  {
+        padding: 0
+    }
+    .todolist li {
+        padding: 10px;
+        background: #ccc;
+        margin: 4px 0;
+        width: 60%;
+    }
+
+    .todolist li .close{
+        display: none;
+        float: right;
+    }
+
+    .todolist li:hover .close{
+        display: block;
+    }
+    form input {
+  padding: 10px 5px;
+  width:50%
+}
+button.add {
+  padding: 10px 20px;
+  background: red;
+  border:0;
+  display: block;
+  margin: 20px 0
+}
+    </style>
+</head>
+<body>
+
+
+            <h1>Simple ToDo List</h1>
+            <p>Completed: <span id="completed">0</span></p>
+            <p>Not completed: <span id="notCompleted">0</span></p>
+            <ol id="todolist">
+            </ol>
+
+            <form  action="" id="formList">
+                <input type="text" name="addList">
+                <button class="add" type="submit">+ Добавить</button>
+            </form>
+           
+            
+            
+
+			
+
+    <script src ="custom.js"></script>
+</body>
+</html>
