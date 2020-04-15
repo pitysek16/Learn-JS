@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geolocation API</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <style>
+        .allow-block,
+        .block-data {
+            display: none;
+        }
+        .spinner-border{
+            visibility: hidden;
+        }
+        #map {
+        height:500px;
+        width:100%
+      }
+    </style>
+  
+</head>
+<body>
+    <div class="container py-5">
+        <div class="row">
+            <div class="col">
+                <h1 class="text-primary py-2 text-uppercase text-center">Where are you?</h1>
+                <h2 class="text-center mb-5">Find your current location</h2>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12">
+                <p id="allow"></p>
+            </div>
+            <div class="col-12" id="allow-block">
+                <button id="get" class="btnGet btn btn-success">Find location</button>
+                <br/>
+                
+            </div>
+        </div>
+        
+        <div class="spinner-border text-info my-3" id="spinner" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+
+        <div class="row">
+            <div class="col-12">
+                <div class="block-data" id="block-get">
+                    <h3 class="mb-4">Your current location:</h3>
+                    <p>Latitude: <span id="latitude"></span></p>
+                    <p>Longitude: <span id="longitude"></span></p>
+                    <p>Accuracy(м): <span id="accuracy"></span></p>
+                    <button id="get-map" class="btn btn-primary my-3">Show location on Google Maps</button>
+                </div>
+                <h3 id="status"></h3>
+            </div>
+            <div class="col-12">
+                <div id="map"></div>
+            </div>
+        </div>
+
+        
+    </div>
+    
+
+    <script src="custom.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDk9R5cmif1wjktejdBUNbKXq8hlm9OA2Q&callback=initMap"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</body>
+</html>
