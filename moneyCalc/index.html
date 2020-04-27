@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budget calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+            <div class="row">
+                <div class="col py-4">
+                    <h1>Budget calculator</h1>
+                    <p>This budget calculator is mainly for the planning of personal finance</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 col-md-6 mx-auto py-4">
+
+
+                <div class="card mb-5">
+                    <div class="card-header">
+                        <h3>Balance</h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="total__header">
+                            <p class="total__balance">0 $</p>
+                        </div>
+                        <div class="row">
+                            <div class="col-6 total__income">
+                                <h3>Income</h3>
+                                <p class="total__money total__money-income text-success">
+                                    +0 $
+                                </p>
+                            </div>
+                            <div class="col-6 total__expenses">
+                                <h3>Expenses</h3>
+                                <p class="total__money total__money-expenses text-danger">
+                                    -0 $
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card my-5">
+                    <div class="card-header">
+                        <h3>Expenses / Income History</h3>
+                    </div>
+                    <div class="card-body">
+                        <ul class="history__list">
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="card my-5">
+                <div class="card-header">
+                    <h3>New operation</h3>
+                </div>
+                <div class="card-body">
+                    <form id="form">
+                        <div class="form-group">
+                          <label for="InputName">The name of the operation</label>
+                          <input type="text" class="operation__fields operation__name" placeholder="Example, bought shoes" id="InputName">
+                        </div>
+                        <div class="form-group">
+                          <label for="inputAmount">Enter amount (+|-)</label>
+                          <input type="number" class="operation__fields operation__amount" placeholder="Example, -500" id="inputAmount">
+                        </div>
+                        <button type="submit" class="operation__add">Add operation</button>
+                    </form>
+                </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+</body>
+
+</html>
