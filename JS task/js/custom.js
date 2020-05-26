@@ -590,4 +590,49 @@ console.log(isPalindrom('арозаупала'));
 console.log(isPalindrom('мАдаМ'));
 
 
+/* 
+Получить число pi из Math и округлить его до 2-х знаков после точки 
+*/
 
+    let pi = Number(Math.PI.toFixed(2));
+    console.log(pi);
+
+
+/* 
+Используя Math, найти максимальное и минимальное числа из представленного ряда 15, 11, 16, 12, 51, 12, 13, 51 */
+
+    let max = Math.max(15, 11, 16, 12, 51, 12, 13, 51);
+    console.log('max: ', max);
+    
+    let min = Math.min(15, 11, 16, 12, 51, 12, 13, 51);
+    console.log('min: ', min);
+
+
+/*
+    Работа с Math.random:
+    a. Получить случайное число и округлить его до двух цифр после запятой
+    b. Получить случайное целое число от 0 до X. X - любое произвольное число.
+*/
+
+    let randomNumber = Number(Math.random().toFixed(2));
+    console.log('randomNumber: ', randomNumber);
+    
+    let x = 20;
+    let randomNumberX = Math.round(Math.random() * x);
+    console.log('randomNumberX: ', randomNumberX);
+
+/*
+    Проверить результат вычисления 0.6 + 0.7 - как привести к нормальному виду (1.3)
+*/
+
+    let sum = 0.6 + 0.7;
+    let rightSum = Number(sum.toFixed(2));
+    console.log(rightSum);
+
+/*
+    Получить число из строки ‘100$’
+*/
+
+    let string = '100$';
+    let number = parseFloat(string);
+    console.log('number: ', number);
