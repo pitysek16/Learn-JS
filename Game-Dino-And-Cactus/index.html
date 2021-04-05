@@ -14,30 +14,50 @@
   <body>
     <div class="container mx-auto py-10 font-mono text-center">
       <h1 class="text-6xl">Dino Game</h1>
-      <p class="text-lg">press any key to make the Dinosaur jump</p>
-      <div class="block_button-start">
+
+      <div class="mt-5 block_buttons" id="block-buttons">
+        <p class="text-lg">
+          <span id="speed-error"></span>
+        </p>
         <button
-          id="button-start"
-          class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-10 rounded mt-5"
+          id="button-easy"
+          class="bg-yellow-500 hover:bg-yellow-900 text-white font-bold py-2 px-10 rounded mt-5 speed-buttons"
         >
-          Start Game
+          Easy
         </button>
+        <button
+          id="button-medium"
+          class="bg-yellow-500 hover:bg-yellow-900 text-white font-bold py-2 px-10 rounded mt-5 speed-buttons"
+        >
+          Medium
+        </button>
+        <button
+          id="button-hard"
+          class="bg-yellow-500 hover:bg-yellow-900 text-white font-bold py-2 px-10 rounded mt-5 speed-buttons"
+        >
+          Hard
+        </button>
+
+        <div>
+          <button
+            id="button-start"
+            class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-10 rounded mt-5"
+          >
+            Start Game
+          </button>
+        </div>
       </div>
+
       <div class="game_block border-b-2 mx-auto border-gray-600">
         <div id="dino"></div>
         <div id="cactus"></div>
       </div>
+      <p class="text-lg">press any key to make the Dinosaur jump</p>
       <div
         class="info_block border-2 my-8 mx-auto border-gray-600 py-10"
         id="info"
       >
         <h2 id="error" class="text-red-500 text-5xl">Game Over</h2>
-        <button
-          id="button-again"
-          class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-10 rounded mt-5"
-        >
-          Try Again
-        </button>
       </div>
     </div>
 

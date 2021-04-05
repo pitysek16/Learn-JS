@@ -1,9 +1,11 @@
 const dino = document.getElementById("dino"),
   cactus = document.getElementById("cactus"),
   p = document.getElementById("error"),
-  buttonAgain = document.getElementById("button-again"),
   buttonStart = document.getElementById("button-start"),
-  infoBlock = document.getElementById("info");
+  infoBlock = document.getElementById("info"),
+  blockButtons = document.getElementById("block-buttons"),
+  speedButtons = document.querySelectorAll(".speed-buttons"),
+  speedError = document.getElementById("speed-error");
 
 let dinoAlive;
 
@@ -32,25 +34,47 @@ function Game() {
 
     if (cactusLeft < 50 && cactusLeft > 0 && dinoTop >= 140) {
       infoBlock.style = "display: block";
+      blockButtons.style = "opacity: 1";
+      buttonStart.innerText = "Try Again";
       cactus.style = `left:${cactusLeft}px`;
       cactus.classList.remove("goLeft");
+      cactus.classList.remove("speedChoose");
       clearInterval(dinoAlive);
     }
   }, 10);
 }
 
 function runGame() {
-  cactus.style = "animation-duration: 2s;";
-  infoBlock.style = "display: none";
-  cactus.classList.add("goLeft");
-  Game();
+  if (cactus.classList.contains("speedChoose")) {
+    infoBlock.style = "display: none";
+    cactus.classList.add("goLeft");
+    blockButtons.style = "opacity: 0";
+    Game();
+  } else {
+    speedError.innerText = "You must select the difficulty of the game";
+  }
 }
 
 buttonStart.addEventListener("click", function () {
   runGame();
-  buttonStart.style = "display: none";
 });
 
-buttonAgain.addEventListener("click", function () {
-  runGame();
+blockButtons.addEventListener("click", function (e) {
+  if (e.toElement.id === "button-easy") {
+    cactus.style = "animation-duration: 2.5s;";
+  } else if (e.toElement.id === "button-medium") {
+    cactus.style = "animation-duration: 2s;";
+  } else if (e.toElement.id === "button-hard") {
+    cactus.style = "animation-duration: 1.5s;";
+  }
+
+  speedButtons.forEach((item) => {
+    item.classList.remove("bg-yellow-900");
+  });
+
+  if (e.toElement.classList.contains("speed-buttons")) {
+    e.toElement.classList.add("bg-yellow-900");
+    cactus.classList.add("speedChoose");
+    speedError.innerText = "";
+  }
 });
