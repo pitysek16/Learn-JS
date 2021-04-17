@@ -8,9 +8,7 @@ const dino = document.querySelector("#dino"),
   speedError = document.querySelector("#speed-error"),
   timer = document.querySelector("#timer");
 
-let dinoAlive,
-  interval,
-  timeNum = 0;
+let dinoAlive, interval, timeNum;
 
 document.addEventListener("keydown", function () {
   jump();
@@ -65,6 +63,7 @@ buttonStart.addEventListener("click", function () {
 });
 
 function time() {
+  timeNum = 0;
   interval = setInterval(() => {
     timeNum += 0.1;
     timer.textContent = timeNum.toFixed(2);
