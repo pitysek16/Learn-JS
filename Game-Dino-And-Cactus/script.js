@@ -1,13 +1,16 @@
-const dino = document.getElementById("dino"),
-  cactus = document.getElementById("cactus"),
-  p = document.getElementById("error"),
-  buttonStart = document.getElementById("button-start"),
-  infoBlock = document.getElementById("info"),
-  blockButtons = document.getElementById("block-buttons"),
+const dino = document.querySelector("#dino"),
+  cactus = document.querySelector("#cactus"),
+  p = document.querySelector("#error"),
+  buttonStart = document.querySelector("#button-start"),
+  infoBlock = document.querySelector("#info"),
+  blockButtons = document.querySelector("#block-buttons"),
   speedButtons = document.querySelectorAll(".speed-buttons"),
-  speedError = document.getElementById("speed-error");
+  speedError = document.querySelector("#speed-error"),
+  timer = document.querySelector("#timer");
 
-let dinoAlive;
+let dinoAlive,
+  interval,
+  timeNum = 0;
 
 document.addEventListener("keydown", function () {
   jump();
@@ -40,6 +43,7 @@ function Game() {
       cactus.classList.remove("goLeft");
       cactus.classList.remove("speedChoose");
       clearInterval(dinoAlive);
+      clearInterval(interval);
     }
   }, 10);
 }
@@ -50,6 +54,7 @@ function runGame() {
     cactus.classList.add("goLeft");
     blockButtons.style = "opacity: 0";
     Game();
+    time();
   } else {
     speedError.innerText = "You must select the difficulty of the game";
   }
@@ -58,6 +63,13 @@ function runGame() {
 buttonStart.addEventListener("click", function () {
   runGame();
 });
+
+function time() {
+  interval = setInterval(() => {
+    timeNum += 0.1;
+    timer.textContent = timeNum.toFixed(2);
+  }, 100);
+}
 
 blockButtons.addEventListener("click", function (e) {
   if (e.toElement.id === "button-easy") {
