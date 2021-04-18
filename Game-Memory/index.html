@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Memory game</title>
+    <link
+      href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link href="style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div
+      class="bg-gradient-to-r from-green-400 to-yellow-500 h-screen font-mono"
+    >
+      <h1 class="text-4xl text-center py-4">Memory Game</h1>
+      <div class="flex flex-wrap justify-content-center m-auto memory-field">
+        <div class="memory-card relative my-1 mx-2" data-color="blue">
+          <div class="front-face absolute" style="background: blue"></div>
+          <div class="back-face absolute"></div>
+        </div>
+
+        <div class="memory-card relative my-1 mx-2" data-color="blue">
+          <div class="front-face absolute" style="background: blue"></div>
+          <div class="back-face absolute"></div>
+        </div>
+
+        <div class="memory-card relative my-1 mx-2" data-color="green">
+          <div class="front-face absolute" style="background: green"></div>
+          <div class="back-face absolute"></div>
+        </div>
+
+        <div class="memory-card relative my-1 mx-2" data-color="green">
+          <div class="front-face absolute" style="background: green"></div>
+          <div class="back-face absolute"></div>
+        </div>
+
+        <div class="memory-card relative my-1 mx-2" data-color="yellow">
+          <div class="front-face absolute" style="background: yellow"></div>
+          <div class="back-face absolute"></div>
+        </div>
+
+        <div class="memory-card relative my-1 mx-2" data-color="yellow">
+          <div class="front-face absolute" style="background: yellow"></div>
+          <div class="back-face absolute"></div>
+        </div>
+
+        <div class="memory-card relative my-1 mx-2" data-color="cyan">
+          <div class="front-face absolute" style="background: cyan"></div>
+          <div class="back-face absolute"></div>
+        </div>
+
+        <div class="memory-card relative my-1 mx-2" data-color="cyan">
+          <div class="front-face absolute" style="background: cyan"></div>
+          <div class="back-face absolute"></div>
+        </div>
+
+        <div class="memory-card relative my-1 mx-2" data-color="red">
+          <div class="front-face absolute" style="background: red"></div>
+          <div class="back-face absolute"></div>
+        </div>
+
+        <div class="memory-card relative my-1 mx-2" data-color="red">
+          <div class="front-face absolute" style="background: red"></div>
+          <div class="back-face absolute"></div>
+        </div>
+
+        <div class="memory-card relative my-1 mx-2" data-color="grey">
+          <div class="front-face absolute" style="background: grey"></div>
+          <div class="back-face absolute"></div>
+        </div>
+
+        <div class="memory-card relative my-1 mx-2" data-color="grey">
+          <div class="front-face absolute" style="background: grey"></div>
+          <div class="back-face absolute"></div>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

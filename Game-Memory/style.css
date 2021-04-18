@@ -1,0 +1,29 @@
+.memory-field {
+  width: 470px;
+  height: 500px;
+}
+.memory-card {
+  width: 100px;
+  height: 120px;
+  transform-style: preserve-3d;
+  transform: scale(1);
+  transition: all 0.2s;
+}
+.memory-card.flip {
+  transform: rotateY(180deg);
+}
+
+.back-face {
+  background: black;
+}
+
+.front-face {
+  transform: rotateY(180deg);
+}
+
+.back-face,
+.front-face {
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
